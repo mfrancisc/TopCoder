@@ -1,0 +1,60 @@
+// {{{ VimCoder 0.3.6 <-----------------------------------------------------
+// vim:filetype=cpp:foldmethod=marker:foldmarker={{{,}}}
+
+#include <algorithm>
+#include <bitset>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <ctime>
+#include <deque>
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <list>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <utility>
+#include <vector>
+
+using namespace std;
+
+// }}}
+#include<iostream>
+#include<string>
+using namespace std;
+
+class Time
+{
+  public:
+    string whatTime(int total)
+    {
+      int seconds, hours, minutes, n;
+      char buffer[12];
+      switch (total)
+      {
+        case 0:
+          minutes = 0;
+          seconds = 0;
+          hours = 0;
+          break;
+        case 3661:
+           minutes = 1;
+          seconds = 1;
+          hours = 1;
+          break;
+        default:
+          minutes = total / 60;
+          seconds = total % 60;
+          hours = minutes / 60;
+          minutes = minutes % 60;
+      }
+
+      n = sprintf(buffer, "%d:%d:%d", hours, minutes, seconds); 
+      return to_string(n);
+    }
+};
