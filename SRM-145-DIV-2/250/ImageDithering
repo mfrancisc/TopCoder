@@ -1,0 +1,49 @@
+// {{{ VimCoder 0.3.6 <-----------------------------------------------------
+// vim:filetype=cpp:foldmethod=marker:foldmarker={{{,}}}
+
+#include <algorithm>
+#include <bitset>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <ctime>
+#include <deque>
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <list>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <utility>
+#include <vector>
+
+using namespace std;
+
+// }}}
+#include <string>
+#include <algorithm>    // std::find
+#include <iostream>     // std::cout
+#include <vector>
+
+using namespace std;
+
+class ImageDithering
+{
+  public:
+    int count(string dithered, vector <string> screen)
+    {
+      int count = 0;
+      //loop array elements
+      for(int i = 0; i < dithered.size(); ++i) {
+        if (find(screen.begin(), screen.end(), dithered[i]) != screen.end())
+        {
+          count++;
+        }
+      }
+      return count;
+    }
+};
