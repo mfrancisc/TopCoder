@@ -1,0 +1,45 @@
+#include<iostream>
+#include<vector>
+#include<string>
+using namespace std;
+
+class PrefixCode{
+  public:
+    string isOne(vector <string> words) {
+      int nrElements = words.size();
+      int sizeArray[] = {};
+      for (int i = 0; i < nrElements; i++)
+      {
+        sizeArray[i] = words[i].size();
+      }
+
+      for(int n = 0; n < nrElements; n++){
+        for (int j = 0;  j< nrElements; j++){
+          if(n == j){
+            continue;
+          }
+
+          if(sizeArray[n] < sizeArray[j]){
+            int readed = 0;
+            for(int z = 0; z < sizeArray[n]; z++)
+            {
+              if(words[n][z] != words[j][z])
+              {
+                break;
+              }
+              readed = z;
+            }
+            cout << readed << endl;
+            cout << sizeArray[n] << endl;
+            if(readed == sizeArray[n])
+            {
+cout << "No, " << words[n] << endl;
+              return "No, words[n]";
+            }
+          }
+
+        }
+      }
+      return "Yes";
+    }
+};
