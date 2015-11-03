@@ -1,0 +1,20 @@
+"Complete machine"
+{100,120,150,1000}
+{110,110,200,2000}
+{20,100,50,3}
+{"Video Card","256M Mem","CPU/Mobo combo","Complete machine"}
+""
+{100}
+{100}
+{134}
+{"Service, at cost"}
+""
+{38,24}
+{37,23}
+{1000,643}
+{"Letter","Postcard"}
+"A"
+{10,10}
+{11,12}
+{2,1}
+{"A","B"}
