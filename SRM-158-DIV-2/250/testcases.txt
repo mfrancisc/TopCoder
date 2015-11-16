@@ -1,0 +1,15 @@
+1
+"ABCD"
+"ABCD"
+2
+"ABCD"
+"DCAB"
+4
+"ABCD"
+"CDBA"
+-1
+"ABCD"
+"ABDC"
+4
+"ZAXN"
+"XNAZ"
