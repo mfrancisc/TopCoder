@@ -1,0 +1,8 @@
+4
+"---B--S-D--S--"
+0
+"DDBDDBDDBDD"
+2
+"--S--S--S--S--"
+14
+"SSD-B---BD-DDSB-----S-S--------S-B----BSB-S--B-S-D"
