@@ -43,16 +43,19 @@ class Workshop
         first = pieces[x];
         for(int y = 0; y < pieces.size(); y++) {
           second = pieces[y];
-          if(first != second) {
+          if(first != second && x < y) {
             for(int z = 0; z < pieces.size(); z++) {
               third = pieces[z];
 
-              if(first != third && second != third) {
+              if(first != third && second != third && y < z) {
+
                 firstRes = first + second;
                 secondRes = first + third;
                 thirdRes = second + third;
+
                 if((third < firstRes) && (second < secondRes) && (first < thirdRes)) {
-                  countPieces++;
+
+                      countPieces++;
                 }
               }
             }
