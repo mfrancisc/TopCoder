@@ -1,0 +1,68 @@
+// {{{ VimCoder 0.3.6 <-----------------------------------------------------
+// vim:filetype=cpp:foldmethod=marker:foldmarker={{{,}}}
+
+#include <algorithm>
+#include <bitset>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <ctime>
+#include <deque>
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <list>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <utility>
+#include <vector>
+
+using namespace std;
+
+// }}}
+
+class SimilarUserDetection
+{
+    public:
+        string haveSimilar(vector <string> handles)
+        {
+            char lookup[8][2];
+            lookup['O'] = '0';
+            lookup['0'] = 'O';
+            lookup['1'] = 'l';
+            lookup['1'] = 'I';
+            lookup['l'] = '1';
+            lookup['l'] = 'I';
+            lookup['I'] = '1';
+            lookup['I'] = 'l';
+
+
+                            string result = "Similar handles not found";
+            for(int i = 0; i < handles.size() - 1; i++){
+                for(int e = i+1; e < handles.size(); e++){
+
+                    // compare strings 
+                    if(handles[i].size() == handles[e].size()) {
+                        int a;
+                        for( a = 0; a < handles[i].size(); a++){
+                            if(handles[i][a] != handles[e][a] && handles[i][a] != lookup[handles[e][a]]){
+                                break;
+                            }
+                        }
+
+                        if(a == handles[i].size() -1) {
+                            result = "Similar handles found";
+                            e = handles.size();
+                            i = handles.size();
+                        };
+                    }
+
+                }  
+            }
+            return result;
+        }
+};
